@@ -1,11 +1,17 @@
 
-all: libclassloops.a libclassloops.so libclassrec.a libclassrec.so mains maindloop maindrec
+all: loops loopd recursives recursived mains maindloop maindrec
 maindrec: main.o
 	gcc -Wall -g -o maindrec main.o ./libclassrec.so
 maindloop: main.o 
 	gcc -Wall -g -o maindloop main.o ./libclassloops.so
 mains: main.o libclassrec.a
 	gcc -Wall -g -o mains main.o libclassrec.a 
+	
+loopd: libclassloops.so
+recursived: libclassrec.so
+loops: libclassloops.a
+recursives: libclassrec.a
+
 libclassloops.so: advancedClassificationLoop.o basicClassification.o
 	gcc -shared -o libclassloops.so advancedClassificationLoop.o basicClassification.o
 libclassrec.so: advancedClassificationRecursion.o basicClassification.o
