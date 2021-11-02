@@ -33,7 +33,7 @@ int main()
     {
         if (i == num1)
         {
-            printf("The Palindrome numbers are: ");
+            printf("The Palindromes numbers are: ");
         }
         if (isPalindrome(i) == 1)
         {
