@@ -21,7 +21,7 @@ int main()
         }
         if (isArmstrong(i) == 1)
         {
-            printf("%d",i);
+            printf("%d", i);
             if (i != num2)
             {
                 printf(" ");
@@ -33,7 +33,7 @@ int main()
     {
         if (i == num1)
         {
-            printf("The Palindromes numbers are:");
+            printf("The Palindromes are:");
         }
         if (isPalindrome(i) == 1)
         {
