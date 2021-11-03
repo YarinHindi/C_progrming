@@ -17,7 +17,7 @@ int main()
     {
         if (i == num1)
         {
-            printf("The Armstrong numbers are: ");
+            printf("The Armstrong numbers are:");
         }
         if (isArmstrong(i) == 1)
         {
@@ -30,7 +30,7 @@ int main()
     {
         if (i == num1)
         {
-            printf("The Palindromes are: ");
+            printf("The Palindromes are:");
         }
         if (isPalindrome(i) == 1)
         {
@@ -43,7 +43,7 @@ int main()
     {
         if (i == num1)
         {
-            printf("The Prime numbers are: ");
+            printf("The Prime numbers are:");
         }
         if (isPrime(i) == 1)
         {
@@ -56,7 +56,7 @@ int main()
     {
         if (i == num1)
         {
-            printf("The Strong numbers are: ");
+            printf("The Strong numbers are:");
         }
         if (isStrong(i) == 1)
         {
