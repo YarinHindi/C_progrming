@@ -1,67 +1,56 @@
-#include "NumClass.h"
 #include <stdio.h>
-
+#include "NumClass.h"
 int main()
 {
     int num1;
-    int num2;
     scanf("%d", &num1);
+    int num2;
     scanf("%d", &num2);
-    if (num1 > num2)
+    int min;
+    int max;
+    if (num1 < num2)
     {
-        int temp = num2;
-        num2 = num1;
-        num1 = temp;
+        min = num1;
+        max = num2;
     }
-    for (int i = num1; i <= num2; i++)
+    else
     {
-        if (i == num1)
-        {
-            printf("The Armstrong numbers are:");
-        }
+        min = num2;
+        max = num1;
+    }
+    printf("The Armstrong numbers are:");
+    for (int i = min; i <= max; i++)
+    {
         if (isArmstrong(i) == 1)
         {
-            printf(" ");
-            printf("%d", i);
+            printf(" %d", i);
         }
     }
     printf("\n");
-    for (int i = num1; i <= num2; i++)
+    printf("The Palindromes are:");
+    for (int i = min; i <= max; i++)
     {
-        if (i == num1)
-        {
-            printf("The Palindromes are:");
-        }
         if (isPalindrome(i) == 1)
         {
-            printf(" ");
-            printf("%d", i);
+            printf(" %d", i);
         }
     }
     printf("\n");
-    for (int i = num1; i <= num2; i++)
+    printf("The Prime numbers are:");
+    for (int i = min; i <= max; i++)
     {
-        if (i == num1)
-        {
-            printf("The Prime numbers are:");
-        }
         if (isPrime(i) == 1)
         {
-            printf(" ");
-            printf("%d", i);
+            printf(" %d", i);
         }
     }
     printf("\n");
-    for (int i = num1; i <= num2; i++)
+    printf("The Strong numbers are:");
+    for (int i = min; i <= max; i++)
     {
-        if (i == num1)
-        {
-            printf("The Strong numbers are:");
-        }
         if (isStrong(i) == 1)
         {
-            printf(" ");
-            printf("%d", i);
+            printf(" %d", i);
         }
     }
     printf("\n");
