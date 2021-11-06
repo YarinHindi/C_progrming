@@ -1,8 +1,8 @@
 
-all: loopd recursived loops recursives mains maindloop maindrec 
-maindrec: main.o
+all:   loops recursives mains maindloop maindrec 
+maindrec: main.o libclassrec.so
 	gcc -Wall -g -o maindrec main.o ./libclassrec.so
-maindloop: main.o 
+maindloop: main.o libclassloops.so
 	gcc -Wall -g -o maindloop main.o ./libclassloops.so
 mains: main.o libclassrec.a
 	gcc -Wall -g -o mains main.o libclassrec.a 
